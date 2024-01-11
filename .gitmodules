@@ -1,0 +1,4 @@
+[submodule "test/Unity"]
+	path = test/Unity
+	url = https://github.com/ThrowTheSwitch/Unity.git
+	branch = v2.5.2

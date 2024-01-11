@@ -1,4 +1,4 @@
 .vscode
 build
-ULib.code-workspace
+*.code-workspace
 ULib Workspace Start.bat

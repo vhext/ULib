@@ -6,9 +6,7 @@ add_compile_definitions(UNITY_INCLUDE_CONFIG_H)
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
 
-
-add_subdirectory(Unity)
-
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/Unity)
 
 add_executable(ULibTest test.c test_uconfig_if.c test_uprotocol_if.c)
  
