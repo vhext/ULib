@@ -26,12 +26,12 @@
 #if UPROTOCOL_DEBUG == 1
 /* Enable debug */
 #define UPROTOCOL_PARAM_ASSERT(exp) \
-    if (!(exp)) {                 \
-        while (1)                 \
-            ;                     \
+    if (!(exp)) {                   \
+        while (1)                   \
+            ;                       \
     }
 #define UPROTOCOL_LOG(fmt, ...) printf(fmt, ##__VA_ARGS__)
-#define UPROTOCOL_FIELD_PRINT(field, val, sz)         \
+#define UPROTOCOL_FIELD_PRINT(field, val, sz)       \
     do {                                            \
         printf("Field [%d]: ", field);              \
         for (unsigned int idx = 0; idx < sz; idx++) \

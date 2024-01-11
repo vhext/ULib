@@ -35,4 +35,3 @@ const uint32_t uptl_if_send(const uint8_t *data, const uint32_t len)
     // -------------------------------
     return UPTL_SUCCESS;
 }
-

@@ -40,7 +40,6 @@
 
 #define ULIB_ARRAY_MAX(list_name) (sizeof(list_name) / sizeof(list_name[0]))
 
-
 #if defined __GNUC__
 #define PACK(__Declaration__) __Declaration__ __attribute__((__packed__))
 #elif defined _MSC_VER

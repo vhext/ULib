@@ -39,7 +39,7 @@ const uint8_t __ext_uconfig_field_map[] = {
     sizeof(struct uconfig_inst),
 };
 const uint8_t __ext_uconfig_field_map_max = sizeof(__ext_uconfig_field_map) - 1;
-const uint8_t __ext_uconfig_inst_max = sizeof(struct uconfig_inst);
+const uint8_t __ext_uconfig_inst_max      = sizeof(struct uconfig_inst);
 
 // ------------------------------------------------------------------------
 //                           User Implementation
