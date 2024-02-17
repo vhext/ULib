@@ -18,7 +18,7 @@ This config manager for embedded system
 
 3. First you must call `uconfig_init()`, this function will load config
 
-+ Main file:
++ File example:
     + Refer header: [./test/test_uconfig_if.h](./test/test_uconfig_if.h)
     + Refer source: [./test/test_uconfig_if.c](./test/test_uconfig_if.c)
 
@@ -32,6 +32,16 @@ This easy protocol for point to point communication, look like RPC protocol, is 
 > Timeout feature need user implementation
 
 ### Usage
+
+1. Implement your transport interface file(uprotocol_if.c and uprotocol_if.h)
+
+2. Your need include uconfig header`#include "uprotocol.h"`
+
+3. Use `uptl_send` function to send request, and `uptl_process` function to handle request
+
++ File example:
+    + Refer header: [./test/test_uprotocol_if.h](./test/test_uprotocol_if.h)
+    + Refer source: [./test/test_uprotocol_if.c](./test/test_uprotocol_if.c)
 
 TODO: Secure feature, for macro switch, predefine cmd handler
 
