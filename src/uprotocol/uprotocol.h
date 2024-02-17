@@ -21,7 +21,7 @@
 #error "UPROTOCOL_STATIC_BUF_SIZE must be greater than 1"
 #endif
 
-#define UPROTOCOL_DEBUG 1
+#define UPROTOCOL_DEBUG 0
 
 #if UPROTOCOL_DEBUG == 1
 /* Enable debug */

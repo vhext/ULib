@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define UCONFIG_DEBUG 1
+#define UCONFIG_DEBUG 0
 
 #if UCONFIG_DEBUG == 1
 /* Enable debug */
