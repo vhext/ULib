@@ -46,7 +46,7 @@
 #define UPROTOCOL_FIELD_PRINT(field, val, sz)
 #endif
 
-typedef const uint32_t (*cmd_handler)(const uint8_t *data, const uint32_t len);
+typedef uint32_t (*cmd_handler)(const uint8_t *data, const uint32_t len);
 
 struct uptl_cmd_handler {
     uint8_t can_segment : 1; // acceptance segment 0: cannot , 1: can
