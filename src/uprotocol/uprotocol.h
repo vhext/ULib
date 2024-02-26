@@ -80,8 +80,8 @@ enum uptl_ret {
     UPTL_ERROR_INVAILD_PARAM,
 };
 
-const uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, const uint8_t *data, uint32_t len);
+uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, const uint8_t *data, uint32_t len);
 
-const uint32_t uptl_process(const uint8_t *data, uint32_t len);
+uint32_t uptl_process(const uint8_t *data, uint32_t len);
 
 #endif

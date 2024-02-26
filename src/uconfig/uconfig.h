@@ -46,12 +46,12 @@ enum uconfig_ret {
     UCONFIG_ERROR_SIZE_MISMATCH,
 };
 
-const uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t size);
+uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t size);
 
-const uint32_t uconfig_write(const uint32_t field, const uint8_t *data, const uint32_t size);
+uint32_t uconfig_write(const uint32_t field, const uint8_t *data, const uint32_t size);
 
-const uint32_t uconfig_restore(void);
+uint32_t uconfig_restore(void);
 
-const uint32_t uconfig_init(void);
+uint32_t uconfig_init(void);
 
 #endif

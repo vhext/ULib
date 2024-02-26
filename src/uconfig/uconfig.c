@@ -52,13 +52,13 @@ extern const uint8_t __ext_uconfig_inst_max;
  * @param data Pointer to the buffer where the data will be stored.
  * @param size The size of the data to be read.
  *
- * @return const uint32_t uconfig error code
+ * @return uint32_t uconfig error code
  *
  * @retval UCONFIG_SUCCESS: if the operation was successful
  * @retval UCONFIG_ERROR_INVALID_FIELD: if the field index is invalid
  * @retval UCONFIG_ERROR_SIZE_MISMATCH: if the size does not match the expected size for the field.
  */
-const uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t size)
+uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t size)
 {
     // Check if field index is valid
     if (field >= __ext_uconfig_field_map_max) {
@@ -90,7 +90,7 @@ const uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t 
  * @param data Pointer to the configuration data to be written.
  * @param size Size of the configuration data to be written.
  *
- * @return const uint32_t uconfig error code
+ * @return uint32_t uconfig error code
  *
  * @retval UCONFIG_SUCCESS: if the write operation is successful
  * @retval UCONFIG_ERROR_INVALID_FIELD: if the field identifier is invalid,
@@ -99,7 +99,7 @@ const uint32_t uconfig_read(const uint32_t field, uint8_t *data, const uint32_t 
  *
  * @retval Other: interface return error
  */
-const uint32_t uconfig_write(const uint32_t field, const uint8_t *data, const uint32_t size)
+uint32_t uconfig_write(const uint32_t field, const uint8_t *data, const uint32_t size)
 {
     // Check if field identifier is valid
     if (field >= __ext_uconfig_field_map_max) {
@@ -133,12 +133,12 @@ const uint32_t uconfig_write(const uint32_t field, const uint8_t *data, const ui
  * and then writes the values from the current instance to their respective
  * positions in the default instance.
  *
- * @return const uint32_t uconfig error code
+ * @return uint32_t uconfig error code
  *
  * @retval UCONFIG_SUCCESS: The restoration was successful.
  * @retval Other: If an error occurred during the restoration process.
  */
-const uint32_t uconfig_restore(void)
+uint32_t uconfig_restore(void)
 {
     memcpy(&__ext_uconfig_inst, &__ext_uconfig_inst_dflt, __ext_uconfig_inst_max);
 
@@ -155,12 +155,12 @@ const uint32_t uconfig_restore(void)
 /**
  * @brief Initializes and read the uconfig module.
  *
- * @return const uint32_t uconfig error code
+ * @return uint32_t uconfig error code
  *
  * @retval UCONFIG_SUCCESS: Initialization successful.
  * @retval Other: Initialization failed.
  */
-const uint32_t uconfig_init(void)
+uint32_t uconfig_init(void)
 {
     uint32_t ret = uconfig_if_init();
     if (ret != UCONFIG_SUCCESS) {

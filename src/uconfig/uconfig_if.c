@@ -49,12 +49,12 @@ const uint8_t __ext_uconfig_inst_max      = sizeof(struct uconfig_inst);
  *
  * @details This function initializes the user configuration interface.
  *
- * @return const uint32_t: The status code of the initialization.
+ * @return uint32_t: The status code of the initialization.
  *
  * @retval UCONFIG_IF_SUCCESS: Initialization success
  * @retval Other: Initialization failure
  */
-const uint32_t uconfig_if_init(void)
+uint32_t uconfig_if_init(void)
 {
     // ---------------Initialize---------------
     // -------------User Implement-------------
@@ -72,12 +72,12 @@ const uint32_t uconfig_if_init(void)
  * @param data Pointer to the data buffer
  * @param size Size of the data buffer
  *
- * @return const uint32_t: uconfig error code
+ * @return uint32_t: uconfig error code
  *
  * @retval UCONFIG_IF_SUCCESS: if the data was successfully written
  * @retval Other: interface return error
  */
-const uint32_t uconfig_if_read(const uint32_t field, uint8_t *data, const uint32_t size)
+uint32_t uconfig_if_read(const uint32_t field, uint8_t *data, const uint32_t size)
 {
     // --------------Read data from persistent storage-------------
     // ----------------------User Implement------------------------
@@ -96,12 +96,12 @@ const uint32_t uconfig_if_read(const uint32_t field, uint8_t *data, const uint32
  * @param data Pointer to the data to be written
  * @param size Size of the data
  *
- * @return const uint32_t: uconfig error code
+ * @return uint32_t: uconfig error code
  *
  * @retval UCONFIG_IF_SUCCESS: if the data was successfully written
  * @retval Other: interface return error
  */
-const uint32_t uconfig_if_write(const uint32_t field, const uint8_t *data, const uint32_t size)
+uint32_t uconfig_if_write(const uint32_t field, const uint8_t *data, const uint32_t size)
 {
     // --------------Write data from persistent storage-------------
     // ----------------------User Implement------------------------

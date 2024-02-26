@@ -34,7 +34,7 @@ static uint8_t __uptl_static_buf[UPROTOCOL_STATIC_BUF_SIZE];
 //                           Private Functions
 // ------------------------------------------------------------------------
 
-static const uint32_t __uptl_cmd_hdl_match(const struct uptl_frame *frame, const uint32_t payload_len)
+static uint32_t __uptl_cmd_hdl_match(const struct uptl_frame *frame, const uint32_t payload_len)
 {
     for (uint32_t i = 0; i < __ext_cmd_hdl_list_len; i++) {
         // match cmd code
@@ -80,7 +80,7 @@ static const uint32_t __uptl_cmd_hdl_match(const struct uptl_frame *frame, const
  *
  * @retval UPTL_SUCCESS: Send success
  */
-const uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, const uint8_t *data, uint32_t len)
+uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, const uint8_t *data, uint32_t len)
 {
     struct uptl_frame *frame        = (struct uptl_frame *)__uptl_static_buf;
     uint32_t frame_size             = sizeof(struct uptl_frame);
@@ -127,7 +127,7 @@ const uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, con
  * @retval UPTL_ERROR_FRAME_LEN if the frame length is invalid
  * @retval UPTL_ERROR_FRAME_SEQ if the frame sequence is invalid
  */
-const uint32_t uptl_process(const uint8_t *data, uint32_t len)
+uint32_t uptl_process(const uint8_t *data, uint32_t len)
 {
     if (len < sizeof(struct uptl_frame)) {
         return UPTL_ERROR_FRAME_LEN;

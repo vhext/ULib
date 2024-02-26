@@ -27,7 +27,7 @@ struct uptl_cmd_handler __ext_cmd_hdl_list[] = {
 };
 uint32_t __ext_cmd_hdl_list_len = sizeof(__ext_cmd_hdl_list);
 
-const uint32_t uptl_if_send(const uint8_t *data, const uint32_t len)
+uint32_t uptl_if_send(const uint8_t *data, const uint32_t len)
 {
     // ------UPTL Send Interface------
     // --------User Implement---------

@@ -19,10 +19,10 @@ enum uconfig_if_ret {
     UCONFIG_IF_SUCCESS = 0,
 };
 
-const uint32_t uconfig_if_init(void);
+uint32_t uconfig_if_init(void);
 
-const uint32_t uconfig_if_read(const uint32_t field, uint8_t *data, const uint32_t size);
+uint32_t uconfig_if_read(const uint32_t field, uint8_t *data, const uint32_t size);
 
-const uint32_t uconfig_if_write(const uint32_t field, const uint8_t *data, const uint32_t size);
+uint32_t uconfig_if_write(const uint32_t field, const uint8_t *data, const uint32_t size);
 
 #endif
