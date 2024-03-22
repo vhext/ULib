@@ -76,7 +76,7 @@ static uint32_t __uptl_cmd_hdl_match(const struct uptl_frame *frame, const uint3
  * @param data The data to be sent.
  * @param len The length of the data.
  *
- * @return uprotocol error code.
+ * @return uint32_t uprotocol error code.
  *
  * @retval UPTL_SUCCESS: Send success
  */
@@ -121,7 +121,7 @@ uint32_t uptl_send(const enum uptl_frame_type type, const uint8_t cmd, const uin
  *
  * @param data Pointer to the UPTL frame data
  * @param len Length of the UPTL frame data
- * @return The return value depends on the processing result
+ * @return uint32_t The return value depends on the processing result
  *
  * @retval UPTL_SUCCESS if the frame is processed successfully
  * @retval UPTL_ERROR_FRAME_LEN if the frame length is invalid
